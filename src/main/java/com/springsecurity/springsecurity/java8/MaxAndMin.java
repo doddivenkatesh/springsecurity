@@ -16,6 +16,7 @@ public class MaxAndMin {
 		 algorithm -git pull
 			 algorithm- git master
 			 git-fetch-merge
+			 git pull op
 	}
 
 }
