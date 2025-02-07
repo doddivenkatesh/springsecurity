@@ -7,9 +7,6 @@ public class ReverseNumber {
 	public static void main(String[] args) {
 		System.out.println("reverse number");
 
-		int remainder = number%10;
-		reverse = reverse*10+ remainder;
-		number= number%10;
+		
 	}
-	sysout("reverse number");
 }
