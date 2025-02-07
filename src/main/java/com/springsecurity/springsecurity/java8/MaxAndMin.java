@@ -16,4 +16,6 @@ public class MaxAndMin {
 
 	}
 
+
+sysout.println("system");
 }
