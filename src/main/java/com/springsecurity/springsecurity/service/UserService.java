@@ -2,6 +2,7 @@ package com.springsecurity.springsecurity.service;
 
 import java.util.List;
 
+
 import org.hibernate.internal.build.AllowSysOut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +21,10 @@ import com.springsecurity.springsecurity.repo.UserRepo;
 public class UserService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
-	 @Autowired
+
+
+	
+	   @Autowired
 	    private JWTService jwtService;
 
 	    @Autowired
