@@ -7,15 +7,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 import jakarta.annotation.Resource;
 
-@Service("roleService")
-public class RoleServicImpl implements RoleService{
-
-	@Resource(name="roleDao")
-	private RoleDao roleDao;
-	@Override
-	 @Transactional
-    public List<CustomerRole> findCustomerRolesByCustomerId(Long customerId) {
-        return roleDao.readCustomerRolesByCustomerId(customerId);
-    }
-
-}
+//@Service("roleService")
+//public class RoleServicImpl implements RoleService{
+//
+//	@Resource(name="roleDao")
+//	private RoleDao roleDao;
+//	@Override
+//	 @Transactional
+//    public List<CustomerRole> findCustomerRolesByCustomerId(Long customerId) {
+//        return roleDao.readCustomerRolesByCustomerId(customerId);
+//    }
+//
+//}
