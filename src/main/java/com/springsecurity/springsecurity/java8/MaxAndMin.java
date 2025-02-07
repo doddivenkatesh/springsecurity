@@ -17,4 +17,5 @@ public class MaxAndMin {
 	}
 
 // sysout random numbers
+// sysout gir add new for push
 }
