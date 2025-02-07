@@ -13,7 +13,7 @@ public class MaxAndMin {
 		   System.out.println("Maximum Element : "+max);
 		 int min =listOfIntegers.stream().min(Comparator.naturalOrder()).get();
 		 System.out.println("Minimum Element : "+min);
-		 
+		 algorithm -git pull
 	}
 
 }
