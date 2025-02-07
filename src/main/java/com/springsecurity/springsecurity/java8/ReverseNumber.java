@@ -11,4 +11,5 @@ public class ReverseNumber {
 		reverse = reverse*10+ remainder;
 		number= number%10;
 	}
+	sysout("reverse number");
 }
