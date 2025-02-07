@@ -18,5 +18,6 @@ public class FrequecyOfElement {
 		 Map<String,Long> counting=Arrays.asList(arr).stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
 		 System.out.println(counting);
 	
+		 
 	}
 }
