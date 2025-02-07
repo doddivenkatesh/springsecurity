@@ -1,6 +1,5 @@
 package com.springsecurity.springsecurity.service;
 
-<<<<<<< HEAD
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 import java.util.Date;
@@ -11,8 +10,6 @@ import java.util.function.Function;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
-=======
->>>>>>> 19f2d9facef8610c7b3ffc5ffb35b4cfbd7da5ca
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +17,6 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-<<<<<<< HEAD
-=======
 
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
@@ -32,7 +27,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
->>>>>>> 19f2d9facef8610c7b3ffc5ffb35b4cfbd7da5ca
 @Service
 public class JWTService {
 

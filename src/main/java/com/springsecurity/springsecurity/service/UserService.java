@@ -2,12 +2,10 @@ package com.springsecurity.springsecurity.service;
 
 import java.util.List;
 
-<<<<<<< HEAD
+
 import org.hibernate.internal.build.AllowSysOut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-=======
->>>>>>> 19f2d9facef8610c7b3ffc5ffb35b4cfbd7da5ca
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -18,19 +16,15 @@ import org.springframework.stereotype.Service;
 import com.springsecurity.springsecurity.entity.Users;
 import com.springsecurity.springsecurity.repo.UserRepo;
 
-<<<<<<< HEAD
 
 @Service
 public class UserService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
-=======
-@Service
-public class UserService {
+
 
 	
->>>>>>> 19f2d9facef8610c7b3ffc5ffb35b4cfbd7da5ca
-	 @Autowired
+	   @Autowired
 	    private JWTService jwtService;
 
 	    @Autowired
@@ -49,7 +43,6 @@ public class UserService {
 	    }
 
 	    public String verify(Users user) {
-<<<<<<< HEAD
 	    	
 	    	try {
 	    	    Authentication authentication = authManager.authenticate(
@@ -60,8 +53,6 @@ public class UserService {
 	    	    LOGGER.error("Authentication error: {}", cause != null ? cause.getMessage() : ex.getMessage(), ex);
 	    	    throw new RuntimeException("Token generation failed", ex);
 	    	}
-=======
->>>>>>> 19f2d9facef8610c7b3ffc5ffb35b4cfbd7da5ca
 	        Authentication authentication = authManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
 	        if (authentication.isAuthenticated()) {
 	            return jwtService.generateToken(user.getUsername());
