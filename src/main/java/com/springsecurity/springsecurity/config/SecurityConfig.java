@@ -13,7 +13,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+<<<<<<< HEAD
 import org.springframework.security.crypto.password.PasswordEncoder;
+=======
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+>>>>>>> 19f2d9facef8610c7b3ffc5ffb35b4cfbd7da5ca
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -32,7 +36,11 @@ public class SecurityConfig {
 
 	        return http.csrf(customizer -> customizer.disable()).
 	                authorizeHttpRequests(request -> request
+<<<<<<< HEAD
 	                        .requestMatchers("/login", "/register", "/pdf/generate").permitAll()
+=======
+	                        .requestMatchers("login", "register").permitAll()
+>>>>>>> 19f2d9facef8610c7b3ffc5ffb35b4cfbd7da5ca
 	                        .anyRequest().authenticated()).
 	                httpBasic(Customizer.withDefaults()).
 	                sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -43,6 +51,7 @@ public class SecurityConfig {
 	    }
 
 
+<<<<<<< HEAD
 		/*
 		 * @Bean public DaoAuthenticationProvider authenticationProvider() {
 		 * DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
@@ -71,4 +80,40 @@ public class SecurityConfig {
 		  return config.getAuthenticationManager();
 		   }
 		 
+=======
+//	    @Bean
+//	    public UserDetailsService userDetailsService() {
+	//
+//	        UserDetails user1 = User
+//	                .withDefaultPasswordEncoder()
+//	                .username("kiran")
+//	                .password("k@123")
+//	                .roles("USER")
+//	                .build();
+	//
+//	        UserDetails user2 = User
+//	                .withDefaultPasswordEncoder()
+//	                .username("harsh")
+//	                .password("h@123")
+//	                .roles("ADMIN")
+//	                .build();
+//	        return new InMemoryUserDetailsManager(user1, user2);
+//	    }
+
+	    @Bean
+	    public AuthenticationProvider authenticationProvider() {
+	        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+	        provider.setPasswordEncoder(new BCryptPasswordEncoder(12));
+	        provider.setUserDetailsService(userDetailsService);
+
+
+	        return provider;
+	    }
+
+	    @Bean
+	    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+	        return config.getAuthenticationManager();
+
+	    }
+>>>>>>> 19f2d9facef8610c7b3ffc5ffb35b4cfbd7da5ca
 }

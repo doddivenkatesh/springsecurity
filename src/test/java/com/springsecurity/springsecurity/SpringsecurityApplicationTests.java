@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class SpringsecurityApplicationTests {
 
+<<<<<<< HEAD
 
 	@Test
 	public void demoTestMethod() {
@@ -16,4 +17,10 @@ class SpringsecurityApplicationTests {
 
 	
 		
+=======
+	@Test
+	void contextLoads() {
+	}
+
+>>>>>>> 19f2d9facef8610c7b3ffc5ffb35b4cfbd7da5ca
 }

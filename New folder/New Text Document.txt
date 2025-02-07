@@ -1,0 +1,9 @@
+git rm -r --cached .
+
+file was changed by another developer
+
+second developer changed spring boot code
+hi  this is venaktesh
+
+
+hii who are you i am venkatesh
