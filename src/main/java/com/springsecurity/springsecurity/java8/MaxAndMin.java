@@ -15,6 +15,7 @@ public class MaxAndMin {
 		 System.out.println("Minimum Element : "+min);
 		 algorithm -git pull
 			 algorithm- git master
+			 git-fetch-merge
 	}
 
 }
