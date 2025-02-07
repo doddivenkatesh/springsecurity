@@ -11,15 +11,15 @@ import org.springframework.stereotype.Repository;
 
 
 
-@Repository("roleDao")
-public interface RoleDao extends JpaRepository<Role, Long> {
-	
-public List<CustomerRole> readCustomerRolesByCustomerId(Long customerId);
-    
-    public Role readRoleByName(String name);
-    
-//    public void addRoleToCustomer(CustomerRole customerRole);
+//@Repository("roleDao")
+//public interface RoleDao extends JpaRepository<Role, Long> {
+//	
+//public List<CustomerRole> readCustomerRolesByCustomerId(Long customerId);
 //    
-//    public void removeCustomerRolesByCustomerId(Long customerId);
-
-}
+//    public Role readRoleByName(String name);
+//    
+////    public void addRoleToCustomer(CustomerRole customerRole);
+////    
+////    public void removeCustomerRolesByCustomerId(Long customerId);
+//
+//}

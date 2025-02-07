@@ -1,7 +1,7 @@
 package com.springsecurity.springsecurity.kovela;
 
-public interface CustomerService {
-
-	Customer readCustomerByUsername(String username);
-
-}
+//public interface CustomerService {
+//
+//	Customer readCustomerByUsername(String username);
+//
+//}
