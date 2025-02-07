@@ -14,6 +14,7 @@ public class MaxAndMin {
 		 int min =listOfIntegers.stream().min(Comparator.naturalOrder()).get();
 		 System.out.println("Minimum Element : "+min);
 		 algorithm -git pull
+			 algorithm- git master
 	}
 
 }
