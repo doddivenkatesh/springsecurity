@@ -18,5 +18,6 @@ public class TwoStringsAnargsOrNot {
 		
 		s1=Arrays.stream(s1.split("")).map(String::toUpperCase).sorted().collect(Collectors.joining());
 		s2=Arrays.stream(s2.split("")).map(String::toUpperCase).sorted().collect(Collectors.joining());
+		
 	}
 }
