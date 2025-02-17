@@ -1,9 +1,9 @@
-package com.springsecurity.springsecurity.java8;
+package com.springsecurity.springsecurity.java7;
 
-public class ASample {
+public class SortAnArray {
 
 	public static void main(String[] args) {
-
+		
 		int[] sort = { 23, 54, 53, 25, 1, 57, 3, 5 };
 
 		for (int i = 0; i < sort.length; i++) {
@@ -21,6 +21,6 @@ public class ASample {
 		for (int arr : sort) {
 			System.out.print(arr + " ");
 		}
+	
 	}
-
 }

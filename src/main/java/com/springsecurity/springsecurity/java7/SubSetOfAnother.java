@@ -25,7 +25,7 @@ public class SubSetOfAnother {
 
 	public static void main(String[] args) {
 		int[] a = { 11, 1, 13, 21, 3, 7 };
-		int[] b = { 11, 3, 7, 1 };
+		int[] b = { 19,11, 3, 7, 1 };
 
 		if (isSubset(a, b)) {
 			System.out.println("true");
