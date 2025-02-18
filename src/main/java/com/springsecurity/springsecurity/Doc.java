@@ -13,3 +13,4 @@ public class Doc {
 //https://www.google.com/search?q=java+8+coding+questions+for+5+years+experience&rlz=1C1CHBD_enIN1143IN1143&oq=java+8+coding+questions+for+5+years+experience&gs_lcrp=EgZjaHJvbWUqCQgAEEUYOxiABDIJCAAQRRg7GIAEMgYIARBFGEAyCAgCEAAYFhgeMg0IAxAAGIYDGIAEGIoFMg0IBBAAGIYDGIAEGIoFMgoIBRAAGIAEGKIEMgoIBhAAGIAEGKIEMgoIBxAAGIAEGKIE0gEIMzgwN2owajeoAgiwAgE&sourceid=chrome&ie=UTF-8
 //https://www.youtube.com/playlist?list=PLGRDMO4rOGcPSelFhlHI1IyvnswvxOidW  java 8 real time examples
 //https://www.youtube.com/watch?v=SLTlqPawDm4&list=PLFkJVujHm8-DTiU6b7FK418NWMcL3oTI5&index=11
+//https://www.interviewbit.com/java-interview-questions/  java questions
