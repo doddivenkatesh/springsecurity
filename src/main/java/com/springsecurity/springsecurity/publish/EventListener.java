@@ -13,7 +13,7 @@ import jakarta.mail.internet.MimeMessage;
 @Component
 public class EventListener implements ApplicationListener<Event>{
 
-	@Autowired
+	@Autowired(required = true)
 	private JavaMailSender emailSender;
 	@Override
 	public void onApplicationEvent(Event event) {
