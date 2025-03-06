@@ -14,15 +14,13 @@ public class Palindrome {
 		List<String> b = Arrays.stream(str.split(" "))
 				.filter(word -> str.equals(new StringBuffer(word).reverse().toString())).collect(Collectors.toList());
 		System.out.println(b);
-		 List<String> upper=b.stream().sorted(Comparator.comparing(String :: toUpperCase)).collect(Collectors.toList());
-        if(b.equals(upper)) {
-        	System.out.println("its anagram");
-        }
+		List<String> upper = b.stream().sorted(Comparator.comparing(String::toUpperCase)).collect(Collectors.toList());
+		if (b.equals(upper)) {
+			System.out.println("its anagram");
+		}
 		List<String> words = Arrays.asList("radar", "hello", "deified");
 		List<String> palindromes = words.stream().filter(s -> s.equals(new StringBuilder(s).reverse().toString()))
 				.collect(Collectors.toList());
-		
-		
-		
+
 	}
 }

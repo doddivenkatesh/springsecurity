@@ -9,10 +9,15 @@ public class ProductRepo {
 
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
-	
-	public void saveProduct(Product product) {
-		String sql = "INSERT INTO TABLE PRODUCT VALUES (?,?)";
-		Object[] args = {product.getId(),product.getName()};
-		jdbcTemplate.update(sql,args);
+
+	public void saveProduct(Productsss product) {
+		// Correct SQL statement
+		String sql = "INSERT INTO PRODUCT (id, name) VALUES (?, ?)";
+
+		// Using object array for query parameters
+		Object[] args = { product.getId(), product.getName() };
+
+		// Execute the query
+		jdbcTemplate.update(sql, args);
 	}
 }
