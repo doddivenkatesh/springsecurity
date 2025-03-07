@@ -12,11 +12,12 @@ import com.springsecurity.springsecurity.entity.UserPrincipal;
 import com.springsecurity.springsecurity.entity.Users;
 import com.springsecurity.springsecurity.repo.UserRepo;
 
-@Service
-@Primary
+//@Service
+//@Primary 
+/* 
 public class MyUserDetailsService implements UserDetailsService{
 	
-	 @Autowired
+	  @Autowired
 	    private UserRepo userRepo;
 
 
@@ -29,6 +30,6 @@ public class MyUserDetailsService implements UserDetailsService{
 	        }
 	        
 	        return new UserPrincipal(user);
-	    }
+	    }}
+*/
 
-}

@@ -11,7 +11,7 @@ public class ReverseWord {
 		}
 		
 		for(String st:reverse) {
-			System.out.println(st);
+			System.out.print(st + " ");
 		}
 	}
 

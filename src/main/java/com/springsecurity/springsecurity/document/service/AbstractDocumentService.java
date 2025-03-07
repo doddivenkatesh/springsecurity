@@ -1,6 +1,9 @@
 package com.springsecurity.springsecurity.document.service;
 
 import static java.lang.Boolean.FALSE;
+import static net.sf.saxon.lib.FeatureKeys.ALLOWED_PROTOCOLS;
+import static net.sf.saxon.lib.FeatureKeys.ALLOW_EXTERNAL_FUNCTIONS;
+import static net.sf.saxon.lib.FeatureKeys.DTD_VALIDATION;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,9 +26,6 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import com.springsecurity.springsecurity.document.exceptio.DocumentServiceException;
 
-import static net.sf.saxon.lib.FeatureKeys.ALLOWED_PROTOCOLS;
-import static net.sf.saxon.lib.FeatureKeys.ALLOW_EXTERNAL_FUNCTIONS;
-import static net.sf.saxon.lib.FeatureKeys.DTD_VALIDATION;
 import jakarta.servlet.http.HttpServletResponse;
 
 public class AbstractDocumentService {

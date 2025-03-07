@@ -2,6 +2,7 @@ package com.springsecurity.springsecurity.document.entity;
 
 
 import lombok.AllArgsConstructor;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
