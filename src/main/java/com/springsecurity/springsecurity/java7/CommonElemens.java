@@ -18,7 +18,7 @@ public class CommonElemens {
 		HashMap<Integer, Integer> hashMap = new HashMap<>();
 		for (int i = 0; i < arr1.length; i++) {
 			if (hashMap.containsKey(arr1[i])) {
-				hashMap.put(arr1[i], hashMap.get(arr1[i]) + 1);
+				hashMap.put(arr1[i], hashMap.get(arr1[i]) +1);//+1 is no need
 			} else {
 				hashMap.put(arr1[i], 1);
 			}

@@ -1,15 +1,6 @@
 package com.springsecurity.springsecurity;
 
 public class Doc {
-//password
-//https://www.google.com/search?q=how+to+do+create+lock+for+an+pdf+after+generating+that+pdf+in+spring+boot+&sca_esv=6980e0185f303b9d&rlz=1C1CHBD_enIN1143IN1143&ei=yemZZ5_IFMKOseMP68-MoQQ&ved=0ahUKEwjf0LG8xJqLAxVCR2wGHesnI0QQ4dUDCBA&uact=5&oq=how+to+do+create+lock+for+an+pdf+after+generating+that+pdf+in+spring+boot+&gs_lp=Egxnd3Mtd2l6LXNlcnAiSmhvdyB0byBkbyBjcmVhdGUgbG9jayBmb3IgYW4gcGRmIGFmdGVyIGdlbmVyYXRpbmcgdGhhdCBwZGYgaW4gc3ByaW5nIGJvb3QgSLkgUKgEWLEecAF4AZABAJgBsQGgAYIRqgEEMC4xNrgBA8gBAPgBAZgCBKACwwPCAgoQABiwAxjWBBhHwgIHECEYoAEYCsICBBAhGAqYAwCIBgGQBgiSBwMxLjOgB4w9&sclient=gws-wiz-serp
 	
 }
 
-//cdoing
-//https://www.google.com/search?q=java+8+coding+interview+questions&sca_esv=464e5116399c8e68&rlz=1C1CHBD_enIN1143IN1143&ei=CdKqZ9O0G6uk2roPh9uJ4QE&ved=0ahUKEwiT3aKb5LqLAxUrklYBHYdtIhwQ4dUDCBA&uact=5&oq=java+8+coding+interview+questions&gs_lp=Egxnd3Mtd2l6LXNlcnAiIWphdmEgOCBjb2RpbmcgaW50ZXJ2aWV3IHF1ZXN0aW9uczIFEAAYgAQyCxAAGIAEGJECGIoFMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgQQABgeMgQQABgeSOcsUNAQWP4dcAF4AJABAJgBfqABlweqAQMxLje4AQPIAQD4AQGYAgigAuMGwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAgcQABiABBgNwgIGEAAYBxgewgILEAAYgAQYhgMYigWYAwCIBgGQBgqSBwMxLjegB5hK&sclient=gws-wiz-serp
-//https://www.google.com/search?q=java+8+coding+questions+for+5+years+experience&sca_esv=464e5116399c8e68&rlz=1C1CHBD_enIN1143IN1143&ei=GNGqZ8-IKKOMvr0PvYHUiQk&oq=java+8+coding+qu&gs_lp=Egxnd3Mtd2l6LXNlcnAiEGphdmEgOCBjb2RpbmcgcXUqAggBMgUQABiABDILEAAYgAQYkQIYigUyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgsQABiABBiGAxiKBUjWMFDQBliRHnABeAGQAQCYAYUBoAH0EKoBBDAuMTm4AQPIAQD4AQGYAgegAuUFwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAgoQABiABBhDGIoFwgIIEAAYgAQYogSYAwCIBgGQBgqSBwMxLjagB_qHAQ&sclient=gws-wiz-serp
-//https://www.google.com/search?q=java+coding+questions+for+5+years+experience&rlz=1C1CHBD_enIN1143IN1143&oq=java+coding+questions+&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCjI0NzU3ajBqMTWoAgiwAgE&sourceid=chrome&ie=UTF-8
-//https://www.google.com/search?q=java+8+coding+questions+for+5+years+experience&rlz=1C1CHBD_enIN1143IN1143&oq=java+8+coding+questions+for+5+years+experience&gs_lcrp=EgZjaHJvbWUqCQgAEEUYOxiABDIJCAAQRRg7GIAEMgYIARBFGEAyCAgCEAAYFhgeMg0IAxAAGIYDGIAEGIoFMg0IBBAAGIYDGIAEGIoFMgoIBRAAGIAEGKIEMgoIBhAAGIAEGKIEMgoIBxAAGIAEGKIE0gEIMzgwN2owajeoAgiwAgE&sourceid=chrome&ie=UTF-8
-//https://www.youtube.com/playlist?list=PLGRDMO4rOGcPSelFhlHI1IyvnswvxOidW  java 8 real time examples
-//https://www.youtube.com/watch?v=SLTlqPawDm4&list=PLFkJVujHm8-DTiU6b7FK418NWMcL3oTI5&index=11

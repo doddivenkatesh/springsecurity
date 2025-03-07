@@ -13,10 +13,17 @@ public class TwoStringAnargams {
 		bf.append(s1);
 		String rev = "";
 		/*
-		 * for(String s:chs) { System.out.println(s); } System.out.println(ch);
+		 * for(String s:chs) { 
+		 * System.out.println(s); 
+		 * } 
+		 * System.out.println(ch);
 		 * 
-		 * for( int i=ch.length-1; i>0; i--) { rev= rev+ch[i]; } if(rev.equals(s1)) {
-		 * System.out.println("its palindrome"); }
+		 * for( int i=ch.length-1; i>0; i--) { 
+		 * rev= rev+ch[i]; 
+		 * } 
+		 * if(rev.equals(s1)) {
+		 * System.out.println("its palindrome"); 
+		 * }
 		 */
 		boolean status = true;
 		if (s1.length() != s2.length()) {

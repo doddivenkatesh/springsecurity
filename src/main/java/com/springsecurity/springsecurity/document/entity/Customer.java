@@ -1,8 +1,8 @@
 package com.springsecurity.springsecurity.document.entity;
 
-
 import static jakarta.persistence.GenerationType.SEQUENCE;
 
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,5 +22,10 @@ public class Customer {
 
 	private String emailAddress;
 
-	private String fullName;
+	private String firstName;
+	private String lastName;
+	
+	private String password;
+	
+	private List<String> roles;
 }
