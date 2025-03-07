@@ -12,5 +12,5 @@ import java.util.stream.IntStream;
 //https://www.google.com/search?q=find+the+highest+salary+in+java+8&rlz=1C1CHBD_enIN1143IN1143&oq=find+the+highest+salary+in+java+8+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yDQgIEAAYhgMYgAQYigUyDQgJEAAYhgMYgAQYigXSAQkxMDg3MmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
 public class ASample {
 
-
+//sample code
 }
