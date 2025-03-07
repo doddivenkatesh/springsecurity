@@ -13,20 +13,13 @@ import javax.crypto.SecretKey;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import com.springsecurity.springsecurity.document.exceptio.InvalidJwtException;
+import io.jsonwebtoken.security.SignatureException;
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
-import java.security.Key;
-import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Function;
 @Service
 public class JWTService {
 
@@ -71,11 +64,16 @@ public class JWTService {
 	    }
 
 	    private Claims extractAllClaims(String token) {
+	    	try {
 	        return Jwts.parserBuilder()
 	                .setSigningKey(getKey()) // Set the signing key
 	                .build() // Build the parser
 	                .parseClaimsJws(token) // Parse the token
 	                .getBody(); // Extract the claims
+	    	} catch(SignatureException e) {
+	    		 //logger.error("Invalid JWT signature: {}", e.getMessage());
+	    	        throw new InvalidJwtException("Invalid JWT signature");
+	    	}
 	    }
 
 	    public boolean validateToken(String token, UserDetails userDetails) {

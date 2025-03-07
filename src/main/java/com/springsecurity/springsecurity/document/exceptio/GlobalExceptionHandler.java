@@ -3,13 +3,13 @@ package com.springsecurity.springsecurity.document.exceptio;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
+import io.jsonwebtoken.security.SignatureException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
-
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -41,5 +41,25 @@ public class GlobalExceptionHandler {
 		return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
 	}
 	
-	
+	 @ExceptionHandler(SignatureException.class)
+	    public ResponseEntity<Map<String, Object>> handleJwtSignatureException(SignatureException ex) {
+	        Map<String, Object> errorDetails = new HashMap<>();
+	        errorDetails.put("timestamp", LocalDateTime.now());
+	        errorDetails.put("status", HttpStatus.UNAUTHORIZED.value());
+	        errorDetails.put("error", "Invalid JWT Token");
+	        errorDetails.put("message", ex.getMessage());
+
+	        return new ResponseEntity<>(errorDetails, HttpStatus.UNAUTHORIZED);
+	    }
+
+	    @ExceptionHandler(InvalidJwtException.class)
+	    public ResponseEntity<Map<String, Object>> handleInvalidJwtException(InvalidJwtException ex) {
+	        Map<String, Object> errorDetails = new HashMap<>();
+	        errorDetails.put("timestamp", LocalDateTime.now());
+	        errorDetails.put("status", HttpStatus.UNAUTHORIZED.value());
+	        errorDetails.put("error", "Invalid JWT Token");
+	        errorDetails.put("message", ex.getMessage());
+
+	        return new ResponseEntity<>(errorDetails, HttpStatus.UNAUTHORIZED);
+	    }
 }
