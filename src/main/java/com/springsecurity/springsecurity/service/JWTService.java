@@ -13,20 +13,13 @@ import javax.crypto.SecretKey;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
+import com.springsecurity.springsecurity.document.exceptio.InvalidJwtException;
+import io.jsonwebtoken.security.SignatureException;
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
-import java.security.Key;
-import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Function;
 @Service
 public class JWTService {
 
@@ -71,11 +64,16 @@ public class JWTService {
 	    }
 
 	    private Claims extractAllClaims(String token) {
+	    	try {
 	        return Jwts.parserBuilder()
 	                .setSigningKey(getKey()) // Set the signing key
 	                .build() // Build the parser
 	                .parseClaimsJws(token) // Parse the token
 	                .getBody(); // Extract the claims
+	    	} catch(SignatureException e) {
+	    		 //logger.error("Invalid JWT signature: {}", e.getMessage());
+	    	        throw new InvalidJwtException("Invalid JWT signature");
+	    	}
 	    }
 
 	    public boolean validateToken(String token, UserDetails userDetails) {
@@ -92,3 +90,70 @@ public class JWTService {
 	    }
 	   
 }
+
+/*
+package com.springsecurity.springsecurity.config;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.springsecurity.springsecurity.document.exception.InvalidJwtException;
+import io.jsonwebtoken.security.SignatureException;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class JwtFilter extends OncePerRequestFilter {
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain filterChain) throws ServletException, IOException {
+        try {
+            // Your existing JWT validation logic here
+            filterChain.doFilter(request, response);
+        } catch (SignatureException e) {
+            handleJwtException(response, "Invalid JWT signature");
+        } catch (InvalidJwtException e) {
+            handleJwtException(response, e.getMessage());
+        }
+    }
+
+    private void handleJwtException(HttpServletResponse response, String message) throws IOException {
+        response.setContentType("application/json");
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+
+        Map<String, Object> errorDetails = new HashMap<>();
+        errorDetails.put("status", 401);
+        errorDetails.put("error", "Unauthorized");
+        errorDetails.put("message", message);
+        errorDetails.put("path", "/api/your-endpoint"); // Update dynamically if needed
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        response.getWriter().write(objectMapper.writeValueAsString(errorDetails));
+    }
+}
+*/
+
+/*
+import io.jsonwebtoken.security.SignatureException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public Claims extractAllClaims(String token) {
+    try {
+        return Jwts.parserBuilder()
+                .setSigningKey(secretKey)
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+    } catch (SignatureException e) {  
+        logger.error("Invalid JWT signature: {}", e.getMessage());
+        throw new InvalidJwtException("Invalid JWT signature");  // Throws custom exception
+    }
+}
+*/

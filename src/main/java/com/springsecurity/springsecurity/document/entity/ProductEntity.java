@@ -2,6 +2,9 @@ package com.springsecurity.springsecurity.document.entity;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,8 +19,8 @@ import lombok.Setter;
 @Data
 @Getter
 @Setter
-//@JsonInclude(JsonInclude.Include.NON_NULL)
-//@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ProductEntity {
 
 	@Id

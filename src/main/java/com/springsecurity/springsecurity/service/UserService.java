@@ -2,6 +2,7 @@ package com.springsecurity.springsecurity.service;
 
 import java.util.List;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +13,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.springsecurity.springsecurity.document.entity.Customer;
-import com.springsecurity.springsecurity.dto.CustomerDto;
 import com.springsecurity.springsecurity.entity.Users;
 import com.springsecurity.springsecurity.repo.UserRepo;
+
 
 @Service
 public class UserService {
@@ -63,4 +64,6 @@ public class UserService {
 
 		return repo.findAll();
 	}
+
+	
 }
