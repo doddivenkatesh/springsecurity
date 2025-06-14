@@ -1,10 +1,11 @@
 package com.springsecurity.springsecurity.document.exceptio;
 
-public class CustomerNotFoundException extends RuntimeException {
+public class ResourceNotFoundException extends RuntimeException{
+
 
 	private static final long serialVersionUID = 1L;
 
-	public CustomerNotFoundException(String message ) {
+	public ResourceNotFoundException(String message) {
 		super(message);
 	}
 }

@@ -15,3 +15,11 @@ public class Doc {
 //https://www.google.com/search?q=transactional+management+in+microservices+with+different+databases&rlz=1C1CHBD_enIN1143IN1143&oq=transactional+management+in+microservices+with+different+databases&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg70gEJNDIyOWowajE1qAIIsAIB&sourceid=chrome&ie=UTF-8 microservices medium
 //https://www.google.com/search?q=design+patterns+in+microservices&sca_esv=fc24ddbdfeda5bef&rlz=1C1CHBD_enIN1143IN1143&sxsrf=AHTn8zqzGUICp1cQll2bOBSo2-94WaMWYg%3A1739957432313&ei=uKS1Z_DoEoGp1e8PxaW0uQQ&oq=design+pa&gs_lp=Egxnd3Mtd2l6LXNlcnAiCWRlc2lnbiBwYSoCCAIyERAAGIAEGJECGLEDGIMBGIoFMg4QABiABBiRAhixAxiKBTILEAAYgAQYkQIYigUyCxAAGIAEGJECGIoFMggQABiABBixAzIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMgUQABiABDILEAAYgAQYsQMYgwEyBRAAGIAESPEzUP8NWNoecAF4AJABAJgBnQGgAdQIqgEDMC44uAEDyAEA-AEBmAIJoAK6CcICCBAAGIAEGLADwgIKEAAYgAQYsAMYCsICFhAuGIAEGLADGMcBGMgDGAoYrwHYAQHCAhQQLhiABBiwAxjHARjIAxivAdgBAcICDBAAGIAEGEMYigUYCsICCBAuGIAEGLEDmAMAiAYBkAYLugYECAEYCJIHAzEuOKAH6TA&sclient=gws-wiz-serp  design pattren
 //https://youtu.be/aOen1-pQLZg?si=n579wOOdvsqVX8aP  java techie
+
+
+//https://youtu.be/fkeoyreOf-o?si=lsLbhMGhHTGmnYHE async and await in react js naveen 
+//https://javaconceptoftheday.com/java-8-interview-sample-coding-questions/ simple code learn
+//google fonts
+//material ui
+//react icons
+//react hot toast

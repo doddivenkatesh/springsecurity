@@ -16,6 +16,6 @@ public class SpringsecurityApplication {
 	ProductService productService=context.getBean("ProductService",ProductService.class);
 	productService.saveProductInfo();
 	context.close();*/
-	  //https://chatgpt.com/share/67c9a660-a5ec-800f-a364-6d0af12eb9cd
+	//https://chatgpt.com/share/67c9a660-a5ec-800f-a364-6d0af12eb9cd
 }
 }

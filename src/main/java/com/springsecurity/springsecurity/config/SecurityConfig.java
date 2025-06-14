@@ -19,6 +19,8 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import com.springsecurity.springsecurity.kovela.security.AuthEntryPointJwt;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -28,19 +30,53 @@ public class SecurityConfig {
 
 	@Autowired
 	private UserDetailsService userDetailsService;
+	
+	@Autowired
+	private AuthEntryPointJwt authEntryPointJwt;
 
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+	    return http
+	        .csrf(csrf -> csrf.disable())
+	        .authorizeHttpRequests(requests -> requests
+	            .requestMatchers(
+	                "/register",
+	                "/api/register",
+	                "/api/login",
+	                "/pdf/generate",
+	                "/api/courses/**" // Allow all under /api/courses
+	            ).permitAll()
+	            .anyRequest().authenticated()
+	        )
+	        .exceptionHandling(exception -> exception.authenticationEntryPoint(authEntryPointJwt))
+	        .httpBasic(Customizer.withDefaults())
+	        .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+	        .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+	        .build();
+	}
+
+
+	/*@Bean   it is also used 
+	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
 		return http.csrf(customizer -> customizer.disable())
-				.authorizeHttpRequests(request -> request.requestMatchers( "/register", "/pdf/generate", "/api/register")
-						.permitAll().requestMatchers( "register").permitAll().anyRequest().authenticated())
+				.authorizeHttpRequests(request -> request.requestMatchers( "/register", 
+						"/pdf/generate",
+						"/api/register",
+						  "/api/courses/**" // Allow all endpoints under /api/courses
+						)
+						.permitAll().requestMatchers
+						( "register",
+						"/api/register",
+						"/api/login")
+						.permitAll().anyRequest().authenticated())
+				.exceptionHandling(exception -> exception.authenticationEntryPoint(authEntryPointJwt))
 				.httpBasic(Customizer.withDefaults())
 				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 				.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class).build();
 
 	}
-
+*/
 	/*
 	 * @Bean public DaoAuthenticationProvider authenticationProvider() {
 	 * DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
